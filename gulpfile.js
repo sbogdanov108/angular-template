@@ -59,6 +59,7 @@ gulp.task( 'watch', function()
     gulp.watch( 'builds/development/sass/**/*.scss', [ 'sass' ] );
     gulp.watch( 'builds/development/**/*.html', [ 'html' ] );
     gulp.watch( 'builds/development/img/**/*', [ 'img' ] );
+    gulp.watch( 'builds/development/fonts/**/*', [ 'fonts' ] );
 } );
 
 // вытащить нужные библиотеки из bower в билд
@@ -103,6 +104,7 @@ gulp.task( 'libs', function()
 gulp.task( 'default', [
     'libs',
     'html',
+    'fonts',
     'img',
     'js',
     'sass',
